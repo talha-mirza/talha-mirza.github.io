@@ -101,7 +101,8 @@ function draw(){
 	textSize(fontsize);
 	text('I Wish You Were Here - Chaand Soorij', (w - 20)/2, (h - 20)/2);
 
-	uiButton();
+	//uiButton();
+	playPause();
 
 	//noFill();
 	//fill(90, 100, 255);
@@ -114,6 +115,22 @@ function draw(){
 	
 }
 
+function playPause(){
+	if(song.isPlaying()){
+		fill(255);
+		bounds = font.textBounds('I Wish You Were Here - Chaand Soorij', (w - 20)/2, (h - 20)/2, fontsize);
+	}
+
+	//mouseFill
+	if(mouseX >= bounds.x && mouseX <= bounds.x + bounds.w && mouseY >= bounds.y && mouseY <= bounds.y + bounds.h){
+		fill(90, 120, 255);
+	} else {
+		noFill();
+	}
+	
+}
+
+/*
 function uiButton(){
 	if(song.isPlaying()){
 		fill(255);
@@ -140,11 +157,13 @@ function uiButton(){
 	}
 	
 }
- 
+*/
 function mousePressed() {
-	if (song.isPlaying()) {
-		song.pause();
-	} else {
-		song.play();
+	if(mouseX >= bounds.x && mouseX <= bounds.x + bounds.w && mouseY >= bounds.y && mouseY <= bounds.y + bounds.h){
+		if (song.isPlaying()) {
+			song.pause();
+		} else {
+			song.play();
+		}
 	}
 }
