@@ -3,21 +3,18 @@ let h = window.innerHeight;
 let font, fontsize = 40;
 
 //audio input
-let csAmp, kAmp, sAmp, tAmp;
-let csSize, kSize, sSize, tSize;
-let chorusSynth, kick, strings, track;
+let amplitude;
+let song;
 
 //---------------------PRELOAD FUNCTION-------------------------------------//
 function preload(){
 	font = loadFont('assets/Lato-Thin.ttf');
 	//loading sound files
-	/*
+	
 	soundFormats('mp3', 'ogg');
-	chorusSynth = loadSound('whoRealyWon_ChorusSynth.mp3');
-	kick = loadSound('whoRealyWon_Kick.mp3');
-	strings = loadSound('whoRealyWon_Strings.mp3');
-	track = loadSound('whoRealyWon_Track.mp3');
-	*/
+	song = loadSound('assets/iwishyouwerehere.mp3');
+
+	
 }
 
 //--------------------PARTICLE CLASS --------------------------------------//
@@ -36,12 +33,20 @@ class Particle{
 		ellipse(this.x, this.y, this.r);
 	}
 
-	moveParticle(){
+	moveParticle(s){
 		if(this.x < 0 || this.x > w) this.xSpeed *= -1;
 		if(this.y < 0 || this.y > h) this.ySpeed *= -1;
+		
+		let randX = random((-(s/6) - 0.1), (0.1 + (s/6)));
+		let randY = random((-(s/4) - 0.2), ((s/4) + 0.2));
 
+		/*
 		this.x += this.xSpeed;
 		this.y += this.ySpeed;
+		*/
+
+		this.x += randX;
+		this.y += randY;
 	}
 
 	joinParticles(particles){
@@ -58,32 +63,15 @@ class Particle{
 let particles = [];
 
 function setup(){
-	//initializeing sounds and amplitudes
-	/*
-	chorusSynth.play();
-	csAmp = new p5.Amplitude();
-	csAmp.setInput(chorusSynth);
-
-	kick.play();
-	kAmp = new p5.Amplitude();
-	kAmp.setInput(kick);
-
-	strings.play();
-	sAmp = new p5.Amplitude();
-	sAmp.setInput(strings);
-
-	track.play();
-	tAmp = new p5.Amplitude();
-	tAmp.setInput(track);
-	*/
+	//initializing sounds and amplitudes
+	song.play();
+	amplitude = new p5.Amplitude();
+	amplitude.setInput(song);
 
 	createCanvas(window.innerWidth - 20, window.innerHeight - 20);
 	noCursor();
 
-	
-
-
-	for(let i = 0; i < (window.innerWidth/10); i++){
+	for(let i = 0; i <= (window.innerWidth/10); i++){
 		particles.push(new Particle());
 	}
 
@@ -93,26 +81,14 @@ function setup(){
 
 function draw(){
 	//rms metering
-	/*
-	var csLevel = csAmp.getLevel();
-	csSize = map(csAmp, 0, 1, 0, 200);
-
-	var kLevel = kAmp.getLevel();
-	kSize = map(kLevel, 0, 1, 0, 200);
-
-	var sLevel = sAmp.getLevel();
-	sSize = map(sLevel, 0, 1, 0, 200);
-
-	var tLevel = tAmp.getLevel();
-	tSize = map(tLevel, 0, 1, 0, 200);
-	*/
-
+	let level = amplitude.getLevel();
+	let size = map(level, 0, 1, 0, 200);
 
 	background('#0f0f0f');
 
 	for(let i = 0; i < particles.length; i++){
 		particles[i].createParticle();
-		particles[i].moveParticle();
+		particles[i].moveParticle(size);
 		particles[i].joinParticles(particles.slice(i));
 	}
 
@@ -121,7 +97,7 @@ function draw(){
 	fill(255);
 
 	fill(255);
-	text('Created by Talha Mirza', (w - 20)/2, (h - 20)/2);
+	text('I Wish You Were Here - Chaand Soorij', (w - 20)/2, (h - 20)/2);
 
 	noFill();
 	//fill(90, 100, 255);
@@ -129,4 +105,14 @@ function draw(){
 	stroke(90, 120, 255);
 	//noStroke();
 	ellipse(mouseX, mouseY, 15, 15);
+}
+
+
+
+function mousePressed() {
+	if (song.isPlaying()) {
+		song.stop();
+	} else {
+		song.play();
+	}
 }
