@@ -1,6 +1,9 @@
 let w = window.innerWidth;
 let h = window.innerHeight;
-let font, fontsize = 40;
+let font, fontsize = w * 1/20;
+let buttonFont = w * 1/30;
+let txtPlay;
+let bounds;
 
 //audio input
 let amplitude;
@@ -76,7 +79,7 @@ function setup(){
 	}
 
 	textFont(font);
-	textSize(fontsize);	
+	textSize(fontsize);
 }
 
 function draw(){
@@ -95,23 +98,52 @@ function draw(){
 	textAlign(CENTER);
 
 	fill(255);
-
-	fill(255);
+	textSize(fontsize);
 	text('I Wish You Were Here - Chaand Soorij', (w - 20)/2, (h - 20)/2);
 
-	noFill();
+	uiButton();
+
+	//noFill();
 	//fill(90, 100, 255);
+
 	strokeWeight(1);
 	stroke(90, 120, 255);
 	//noStroke();
+	
 	ellipse(mouseX, mouseY, 15, 15);
+	
 }
 
+function uiButton(){
+	if(song.isPlaying()){
+		fill(255);
+		textSize(buttonFont);
+		txtPlay = text('Pause', (w - 20)/2, (h - 20)/2 + fontsize);
+		bounds = font.textBounds('Pause', (w - 20)/2, (h - 20)/2 + fontsize, buttonFont);
+	} else if(song.isPaused()){
+		fill(255);
+		textSize(buttonFont);
+		txtPlay = text('Play', (w - 20)/2, (h - 20)/2 + fontsize);
+		bounds = font.textBounds('Play', (w - 20)/2, (h - 20)/2 + fontsize, buttonFont);
+	} else {
+		fill(255);
+		textSize(buttonFont);
+		txtPlay = text('Replay', (w - 20)/2, (h - 20)/2 + fontsize);
+		bounds = font.textBounds('Replay', (w - 20)/2, (h - 20)/2 + fontsize, buttonFont);
+	}
 
-
+	//mouseFill
+	if(mouseX >= bounds.x && mouseX <= bounds.x + bounds.w && mouseY >= bounds.y && mouseY <= bounds.y + bounds.h){
+		fill(90, 120, 255);
+	} else {
+		noFill();
+	}
+	
+}
+ 
 function mousePressed() {
 	if (song.isPlaying()) {
-		song.stop();
+		song.pause();
 	} else {
 		song.play();
 	}
