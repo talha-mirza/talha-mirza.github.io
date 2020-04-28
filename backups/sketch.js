@@ -130,12 +130,38 @@ function playPause(){
 	
 }
 
+/*
+function uiButton(){
+	if(song.isPlaying()){
+		fill(255);
+		textSize(buttonFont);
+		txtPlay = text('Pause', (w - 20)/2, (h - 20)/2 + fontsize);
+		bounds = font.textBounds('Pause', (w - 20)/2, (h - 20)/2 + fontsize, buttonFont);
+	} else if(song.isPaused()){
+		fill(255);
+		textSize(buttonFont);
+		txtPlay = text('Play', (w - 20)/2, (h - 20)/2 + fontsize);
+		bounds = font.textBounds('Play', (w - 20)/2, (h - 20)/2 + fontsize, buttonFont);
+	} else {
+		fill(255);
+		textSize(buttonFont);
+		txtPlay = text('Replay', (w - 20)/2, (h - 20)/2 + fontsize);
+		bounds = font.textBounds('Replay', (w - 20)/2, (h - 20)/2 + fontsize, buttonFont);
+	}
+
+	//mouseFill
+	if(mouseX >= bounds.x && mouseX <= bounds.x + bounds.w && mouseY >= bounds.y && mouseY <= bounds.y + bounds.h){
+		fill(90, 120, 255);
+	} else {
+		noFill();
+	}
+	
+}
+*/
 function mousePressed() {
 	if(mouseX >= bounds.x && mouseX <= bounds.x + bounds.w && mouseY >= bounds.y && mouseY <= bounds.y + bounds.h){
 		if (song.isPlaying()) {
 			song.pause();
-		} else if(song.isPaused()){
-			song.play();
 		} else {
 			song.play();
 		}
