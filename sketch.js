@@ -7,7 +7,7 @@ let bounds;
 
 //audio input
 let amplitude;
-let song, autoplay;
+let song, audiocontext;
 
 //---------------------PRELOAD FUNCTION-------------------------------------//
 function preload(){
@@ -21,7 +21,7 @@ function preload(){
 	song = document.createElement('audio').
 	song = loadSound('assets/iwishyouwerehere.mp3');
 
-
+	this.audiocontext = getAudioContext();
 }
 
 //--------------------PARTICLE CLASS --------------------------------------//
