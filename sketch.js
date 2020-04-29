@@ -19,12 +19,10 @@ function preload(){
 	font = loadFont('assets/Lato-Thin.ttf');
 	
 	//loading sound files
-	var source = 'assets/iwishyouwerehere.mp3';
 	soundFormats('mp3', 'ogg');
-	//song = loadSound('assets/iwishyouwerehere.mp3');
-	//song = document.getElementById("song");
-	song = document.createElement('audio').
 	song = loadSound('assets/iwishyouwerehere.mp3');
+	//song = document.getElementById("song");
+	//song = document.createElement('audio').
 }
 
 //--------------------PARTICLE CLASS --------------------------------------//
