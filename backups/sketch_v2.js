@@ -14,10 +14,10 @@ function preload(){
 	font = loadFont('assets/Lato-Thin.ttf');
 	//loading sound files
 	
-	soundFormats('mp3', 'ogg');
-	song = loadSound('assets/iwishyouwerehere.mp3');
-	//song = document.getElementById("song");
-
+	//soundFormats('mp3', 'ogg');
+	//song = loadSound('assets/iwishyouwerehere.mp3');
+	song = document.getElementById("song");
+	//loadedSong = loadSound(song);
 }
 
 //--------------------PARTICLE CLASS --------------------------------------//
@@ -67,9 +67,9 @@ let particles = [];
 
 function setup(){
 	//initializing sounds and amplitudes
-	song.play();
-	amplitude = new p5.Amplitude();
-	amplitude.setInput(song);
+	//song.play();
+	//amplitude = new p5.Amplitude();
+	//amplitude.setInput(song);
 
 
 	createCanvas(window.innerWidth - 20, window.innerHeight - 20);
@@ -85,8 +85,9 @@ function setup(){
 
 function draw(){
 	//rms metering
-	let level = amplitude.getLevel();
-	let size = map(level, 0, 1, 0, 200);
+	//let level = amplitude.getLevel();
+	//let size = map(level, 0, 1, 0, 200);
+	size = 6;
 
 	background('#0f0f0f');
 
@@ -101,17 +102,27 @@ function draw(){
 	fill(255);
 	textSize(fontsize);
 	text('I Wish You Were Here - Chaand Soorij', (w - 20)/2, (h - 20)/2);
-	
+
+	//uiButton();
 	playPause();
+
+	//noFill();
+	//fill(90, 100, 255);
 
 	strokeWeight(1);
 	stroke(90, 120, 255);
-
+	//noStroke();
+	
 	ellipse(mouseX, mouseY, 15, 15);
 	
 }
 
 function playPause(){
+	/*
+	if(song.isPlaying()){
+		fill(255);
+		bounds = font.textBounds('I Wish You Were Here - Chaand Soorij', (w - 20)/2, (h - 20)/2, fontsize);
+	}*/
 	fill(255);
 	bounds = font.textBounds('I Wish You Were Here - Chaand Soorij', (w - 20)/2, (h - 20)/2, fontsize);
 
@@ -124,7 +135,7 @@ function playPause(){
 	
 }
 
-
+/*
 function mousePressed() {
 	if(mouseX >= bounds.x && mouseX <= bounds.x + bounds.w && mouseY >= bounds.y && mouseY <= bounds.y + bounds.h){
 		if (song.isPlaying()) {
@@ -136,3 +147,4 @@ function mousePressed() {
 		}
 	}
 }
+*/
