@@ -16,7 +16,7 @@ function preload(){
 	
 	soundFormats('mp3', 'ogg');
 	song = loadSound('assets/iwishyouwerehere.mp3');
-
+	//song = document.getElementById("song");
 	
 }
 
