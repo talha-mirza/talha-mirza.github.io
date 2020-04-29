@@ -114,6 +114,12 @@ function draw(){
 
 	ellipse(mouseX, mouseY, 15, 15);
 	
+	push();
+	noFill();
+	strokeWeight(2);
+	stroke('rgba(90, 120, 255, 0.2)');
+	ellipse(pmouseX, pmouseY, 30, 30);
+	pop();
 }
 
 function playPause(){
