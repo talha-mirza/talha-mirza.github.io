@@ -10,6 +10,11 @@ let amplitude;
 let song, audiocontext;
 
 //---------------------PRELOAD FUNCTION-------------------------------------//
+window.onload = function(){
+	audiocontext = new AudioContext();
+	audiocontext.resume();
+}
+
 function preload(){
 	font = loadFont('assets/Lato-Thin.ttf');
 	
@@ -20,8 +25,6 @@ function preload(){
 	//song = document.getElementById("song");
 	song = document.createElement('audio').
 	song = loadSound('assets/iwishyouwerehere.mp3');
-
-	this.audiocontext = getAudioContext();
 }
 
 //--------------------PARTICLE CLASS --------------------------------------//
