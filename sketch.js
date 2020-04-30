@@ -11,6 +11,7 @@ let song, audiocontext;
 
 //---------------------PRELOAD FUNCTION-------------------------------------//
 window.onload = function(){
+	window.autoPlay = true;
 	audiocontext = new AudioContext();
 	audiocontext.resume();
 }
