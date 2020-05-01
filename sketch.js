@@ -8,10 +8,11 @@ let bounds;
 //audio input
 let amplitude;
 let song, audiocontext;
+let htmlSong;
 
 //---------------------PRELOAD FUNCTION-------------------------------------//
 window.onload = function(){
-	window.autoPlay = true;
+	//window.autoPlay = true;
 	audiocontext = new AudioContext();
 	audiocontext.resume();
 }
@@ -74,6 +75,7 @@ let particles = [];
 function setup(){
 	//initializing sounds and amplitudes
 	song.play();
+
 	amplitude = new p5.Amplitude();
 	amplitude.setInput(song);
 
