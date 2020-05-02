@@ -17,6 +17,13 @@ window.onload = function(){
 	audiocontext.resume();
 }
 
+function windowResized(){
+	w = window.innerWidth - 20;
+	h = window.innerHeight - 20;
+	resizeCanvas(w, h);
+	fontsize = w * 1/20;
+}
+
 function preload(){
 	font = loadFont('assets/Lato-Thin.ttf');
 	
@@ -30,8 +37,8 @@ function preload(){
 //--------------------PARTICLE CLASS --------------------------------------//
 class Particle{
 	constructor(){
-		this.x = random(0, width);
-		this.y = random(0, height);
+		this.x = random(0, w);
+		this.y = random(0, h);
 		this.r = random(1, 8);
 		this.xSpeed = random(-0.2, 0.2);
 		this.ySpeed = random(-0.2, 0.5);
