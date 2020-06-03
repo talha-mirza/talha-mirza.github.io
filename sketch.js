@@ -26,7 +26,7 @@ function windowResized(){
 
 function preload(){
 	font = loadFont('assets/Lato-Thin.ttf');
-	
+
 	//loading sound files
 	soundFormats('mp3', 'ogg');
 	song = loadSound('assets/iwishyouwerehere.mp3');
@@ -53,7 +53,7 @@ class Particle{
 	moveParticle(s){
 		if(this.x < 0 || this.x > w) this.xSpeed *= -1;
 		if(this.y < 0 || this.y > h) this.ySpeed *= -1;
-		
+
 		let randX = random((-(s/6) - 0.1), (0.1 + (s/6)));
 		let randY = random((-(s/4) - 0.2), ((s/4) + 0.2));
 
@@ -110,20 +110,20 @@ function draw(){
 		particles[i].moveParticle(size);
 		particles[i].joinParticles(particles.slice(i));
 	}
-
+	
 	textAlign(CENTER);
 
 	fill(255);
 	textSize(fontsize);
 	text('I Wish You Were Here - Chaand Soorij', (w - 20)/2, (h - 20)/2);
-	
+
 	playPause();
 
 	strokeWeight(1);
 	stroke(90, 120, 255);
 
 	ellipse(mouseX, mouseY, 15, 15);
-	
+
 	push();
 	noFill();
 	strokeWeight(2);
@@ -142,7 +142,7 @@ function playPause(){
 	} else {
 		noFill();
 	}
-	
+
 }
 
 
