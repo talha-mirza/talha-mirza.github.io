@@ -23,8 +23,8 @@ function displayedProj(){
 
   if(displayMusic === true){
     musicProjectButton.classList.toggle("music-project-on");
-    for (i = 0; i < allProject.length; i++) {
-      allProject[i].style.display = "none";
+    for (l = 0; l < allProject.length; l++) {
+      allProject[l].style.display = "none";
     }
 
     for (i = 0; i < musicProject.length; i++) {
@@ -42,14 +42,23 @@ function displayedProj(){
     for (i = 0; i < allProject.length; i++) {
       allProject[i].style.display = "none";
     }
+
     for (i = 0; i < programmingProject.length; i++) {
       programmingProject[i].style.display = "flex";
     }
+
   } else if(programmingProjectButton.classList.contains("programming-project-on") || displayProgramming === true){
     programmingProjectButton.classList.toggle("programming-project-on");
     for (i = 0; i < allProject.length; i++) {
       allProject[i].style.display = "flex";
     }
+  }
+}
+
+function shuffleContents(){
+  var ul = document.querySelector('.content-body-projects');
+  for(var i = ul.children.length; i >= 0; i--){
+    ul.appendChild(ul.children[Math.random() * i | 0]);
   }
 }
 
@@ -71,6 +80,7 @@ function navMusic() {
     displayMusic = false;
     displayAll = true;
   }
+  displayProgramming = false;
 
   displayedProj();
 }
@@ -80,11 +90,12 @@ function navProgramming() {
   if(displayProgramming === false){
     displayProgramming = true;
     displayAll = false;
-    displayMusic = false
+    displayMusic = false;
   } else {
     displayProgramming = false;
     displayAll = true;
   }
+  displayMusic = false;
 
   displayedProj();
 }
