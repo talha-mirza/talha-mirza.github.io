@@ -106,8 +106,8 @@ function navResume() {
 }
 
 function audioPlayer(){
+  event.preventDefault();
   var currentSong = 0;
-  
   $("#playlist li a").click(function(e){
     e.preventDefault();
     $("#audioPlayer")[0].src = this;

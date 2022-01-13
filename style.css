@@ -34,6 +34,11 @@ h3 {
   letter-spacing: 0.2rem;
 }
 
+audio {
+  display: flex;
+  width: 94%;
+}
+
 #bodyColor{
   background-color: var(--background-color);
 }
@@ -325,6 +330,7 @@ project page content
 #playlist{
   list-style: none;
   padding: 3%;
+  padding-top: 0;
   display: inline-block;
   flex-direction: column;
 }
@@ -336,7 +342,7 @@ project page content
 #playlist li a{
   text-decoration: none;
   color: var(--default-text-color);
-  padding: 3%;
+  padding: 2.5%;
   padding-right: 0;
   display: flex;
   width: auto;
