@@ -30,10 +30,12 @@ function displayedProj(){
     for (i = 0; i < musicProject.length; i++) {
       musicProject[i].style.display = "flex";
     }
-  } else if(musicProjectButton.classList.contains("music-project-on") || displayMusic === true) {
+  } else if(musicProjectButton.classList.contains("music-project-on")) {
     musicProjectButton.classList.toggle("music-project-on");
-    for (i = 0; i < allProject.length; i++) {
-      allProject[i].style.display = "flex";
+    if(displayAll === true){
+      for (i = 0; i < allProject.length; i++) {
+        allProject[i].style.display = "flex";
+      }
     }
   }
 
@@ -47,10 +49,12 @@ function displayedProj(){
       programmingProject[i].style.display = "flex";
     }
 
-  } else if(programmingProjectButton.classList.contains("programming-project-on") || displayProgramming === true){
+  } else if(programmingProjectButton.classList.contains("programming-project-on")){
     programmingProjectButton.classList.toggle("programming-project-on");
-    for (i = 0; i < allProject.length; i++) {
-      allProject[i].style.display = "flex";
+    if(displayAll === true){
+      for (i = 0; i < allProject.length; i++) {
+        allProject[i].style.display = "flex";
+      }
     }
   }
 }
@@ -116,6 +120,16 @@ function audioPlayer(){
     currentSong = $(this).parent().index();
     $(this).parent().addClass("current-song");
     $("#audioPlayerCurrentSong").html($(this).html());
+  });
+
+  $("#audioPlayer")[0].addEventListener("ended", function(){
+    currentSong++;
+    if(currentSong == $("#playlist li a").length)
+      currentSong = 0;
+    $("#plalist li").removeClass("current-song");
+    $("#playlist li:eq("+currentSong+")").addClass("current-song");
+    $("#audioPlayer")[0].src = $("#playlist li a")[currentSong].href;
+    $("#audioPlayer")[0].play();
   });
 
 }
