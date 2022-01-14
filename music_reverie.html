@@ -33,18 +33,20 @@
       <div class="project-body">
         <h1>Reverie</h1>
         <p>This is a description of the content</p>
-      </div>
 
-      <div class="audio-player-container">
-        <div class="audio-player-title-container">
-          <h2 id="audioPlayerCurrentSong" class="song-title">r e v e r i e</h2>
-          <h2 class="album-title">r e v e r i e</h2>
+
+        <div class="audio-player-container">
+          <div class="audio-player-title-container">
+            <h2 id="audioPlayerCurrentSong" class="song-title">r e v e r i e</h2>
+            <h2 class="album-title">r e v e r i e</h2>
+          </div>
+          <audio class="audio-player" controls id="audioPlayer" src="assets/music/reverie/Reverie_Master.wav" type="audio/wav"></audio>
+          <ul id="playlist">
+            <li class="current-song"><a onclick="audioPlayer()" href="assets/music/reverie/Reverie_Master.wav">r e v e r i e</a></li>
+            <li><a onclick="audioPlayer()" href="assets/music/reverie/Session_Master.wav">m u s i n g s</a></li>
+          </ul>
         </div>
-        <audio class="audio-player" controls id="audioPlayer" src="assets/music/reverie/Reverie_Master.wav" type="audio/wav"></audio>
-        <ul id="playlist">
-          <li class="current-song"><a onclick="audioPlayer()" href="assets/music/reverie/Reverie_Master.wav">r e v e r i e</a></li>
-          <li><a onclick="audioPlayer()" href="assets/music/reverie/Session_Master.wav">m u s i n g s</a></li>
-        </ul>
+
       </div>
 
     </div>
