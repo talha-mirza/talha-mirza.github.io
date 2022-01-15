@@ -49,7 +49,7 @@ audio {
 navbar setup
 ****************************************************************************************************/
 /* navbar style */
-@media (min-width: 1300px){
+@media (min-width: 501px){
   nav.navbar ul{
     list-style-type: none;
     display: inline-block;
@@ -84,58 +84,6 @@ navbar setup
     display: block;
     margin: 10%;
     padding: 5%;
-  }
-}
-
-
-@media (min-width: 501px) and (max-width: 1299px){
-  nav.navbar ul{
-    list-style-type: none;
-    display: inline-block;
-    width: 100%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    background-color: var(--background-color);
-    position: fixed;
-    overflow: auto;
-    justify-content: space-between;
-    z-index: 9;
-  }
-
-  .navbar-home, .navbar-home a{
-    display: inline-block;
-    color: var(--default-text-color);
-    font-size: 120%;
-    font-weight: 900;
-    letter-spacing: 0.2rem;
-    text-decoration: none;
-    text-align: left;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-    width: max-content;
-  }
-
-  .navbar-mobile-menu{
-    display: none;
-  }
-
-  .navbar-item {
-    display: inline-block;
-    color: var(--default-text-color);
-    letter-spacing: 0.2rem;
-    text-decoration: none;
-    text-align: center;
-    margin-left: auto;
-  }
-  .navbar-item a{
-    color: var(--default-text-color);
-    letter-spacing: 0.2rem;
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    width: 20ch;
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 }
 
@@ -331,13 +279,12 @@ homepage body setup
 
 @media (min-width: 501px) and (max-width: 1300px){
   .content-body{
-    margin-top: 15%;
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    margin-left: 1.5%;
+    margin-left: 15%;
     margin-right: 1.5%;
-    padding-top: 10px;
+    padding-left: 2px;
   }
   li.project-item{
     margin: 0 15px 30px;
