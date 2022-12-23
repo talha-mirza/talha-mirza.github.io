@@ -687,7 +687,7 @@ resume page content
   margin: 3%;
 }
 
-@media only screen and (max-width: 505px){
+@media only screen and (max-width: 1300px){
   .resume-content-body{
     display: flex;
     flex-direction: row;
