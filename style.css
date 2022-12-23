@@ -59,7 +59,7 @@ audio {
 navbar setup
 ****************************************************************************************************/
 /* navbar style */
-@media screen and (min-width: 951){
+@media only screen and (min-width: 506px){
   nav.navbar ul{
     list-style-type: none;
     display: inline-block;
@@ -122,7 +122,7 @@ navbar setup
 }
 
 
-@media screen and (max-width: 505px){
+@media only screen and (max-width: 505px){
   nav.navbar ul{
     list-style-type: none;
     display: flex;
@@ -305,7 +305,7 @@ homepage body setup
   }
 }
 
-@media (min-width: 951px) and (max-width: 1300px){
+@media (min-width: 506px) and (max-width: 1300px){
   .content-body{
     display: flex;
     flex-wrap: wrap;
@@ -332,7 +332,7 @@ homepage body setup
   }
 }
 
-@media screen and (max-width: 950px){
+@media only screen and (max-width: 505px){
   .content-body{
     margin-top: 0;
     display: flex;
@@ -459,7 +459,7 @@ project page content
   }
 }
 
-@media screen and (max-width: 950px){
+@media only screen and (max-width: 505px){
   .project-body{
     margin-left: 2%;
     margin-right: 2%;
@@ -685,7 +685,7 @@ resume page content
   margin: 3%;
 }
 
-@media screen and (max-width: 950px){
+@media only screen and (max-width: 505px){
   .resume-content-body{
     display: flex;
     flex-direction: row;
