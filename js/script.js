@@ -143,7 +143,7 @@ function mobileOnClick(){
   if (mediaQuery.matches) {
     if(mobileMenuHide == true){
       for(i = 0; i < navbarItem.length; i++){
-        navbarItem[i].style.display = "block"; 
+        navbarItem[i].style.display = "flex"; 
       }
       mobileMenuHide = false;
     } else if(mobileMenuHide == false){
