@@ -59,7 +59,7 @@ audio {
 navbar setup
 ****************************************************************************************************/
 /* navbar style */
-@media only screen and (min-width: 506px){
+@media only screen and (min-width: 1301px){
   nav.navbar ul{
     list-style-type: none;
     display: inline-block;
@@ -122,7 +122,7 @@ navbar setup
 }
 
 
-@media only screen and (max-width: 505px){
+@media only screen and (max-width: 1300px){
   nav.navbar ul{
     list-style-type: none;
     display: flex;
@@ -305,6 +305,7 @@ homepage body setup
   }
 }
 
+/*
 @media (min-width: 506px) and (max-width: 1300px){
   .content-body{
     display: flex;
@@ -331,8 +332,9 @@ homepage body setup
     transition: flex-grow 500ms;
   }
 }
+*/
 
-@media only screen and (max-width: 505px){
+@media only screen and (max-width: 1300px){
   .content-body{
     margin-top: 0;
     display: flex;
@@ -396,7 +398,7 @@ li.project-item:hover, li.project-item:focus{
 project page content
 ****************************************************************************************************/
 /*header styling*/
-@media screen and (max-width: 1300px){
+@media only screen and (max-width: 1300px){
   .project-header{
     max-width: 100%;
   }
@@ -412,8 +414,9 @@ project page content
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
   }
   .audio-player-container{
     display: flex;
@@ -428,7 +431,7 @@ project page content
   }
 }
 
-@media (min-width: 1300px){
+@media (min-width: 1301px){
   .project-header{
     max-width: 100%;
   }
@@ -459,13 +462,8 @@ project page content
   }
 }
 
-@media only screen and (max-width: 505px){
-  .project-body{
-    margin-left: 2%;
-    margin-right: 2%;
-    text-align: center;
-  }
-}
+
+
 
 
 .project-body h1{
@@ -685,7 +683,7 @@ resume page content
   margin: 3%;
 }
 
-@media only screen and (max-width: 505px){
+@media only screen and (max-width: 1300px){
   .resume-content-body{
     display: flex;
     flex-direction: row;
