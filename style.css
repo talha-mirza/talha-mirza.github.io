@@ -141,7 +141,7 @@ navbar setup
   .navbar-home, .navbar-home a{
     display: block;
     color: var(--default-text-color);
-    font-size: 120%;
+    font-size: larger;
     font-weight: 900;
     letter-spacing: 0.2rem;
     text-decoration: none;
@@ -725,7 +725,7 @@ resume page content
 
   .resume-body{
     padding-top: 5%;
-    margin-left: 2.5%;
+    margin-left: 1%;
     justify-content: top;
     text-align: center;
     list-style: none;
