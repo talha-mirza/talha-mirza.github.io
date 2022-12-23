@@ -135,7 +135,7 @@ function audioPlayer(){
 }
 
 
-const mediaQuery = window.matchMedia('screen and (max-width: 500px)');
+const mediaQuery = window.matchMedia('screen and (max-width: 1300px)');
 var navbarItem = document.getElementsByClassName("navbar-item");
 var mobileMenuHide = true;
 
