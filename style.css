@@ -59,7 +59,7 @@ audio {
 navbar setup
 ****************************************************************************************************/
 /* navbar style */
-@media screen and (min-width: 506px){
+@media screen and (min-width: 1301px){
   nav.navbar ul{
     list-style-type: none;
     display: inline-block;
@@ -122,7 +122,7 @@ navbar setup
 }
 
 
-@media screen and (max-width: 505px){
+@media screen and (max-width: 1300px){
   nav.navbar ul{
     list-style-type: none;
     display: flex;
