@@ -122,7 +122,7 @@ navbar setup
 }
 
 
-@media only screen and (max-width: 505px){
+@media screen and (max-width: 505px){
   nav.navbar ul{
     list-style-type: none;
     display: flex;
