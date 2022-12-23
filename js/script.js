@@ -133,3 +133,25 @@ function audioPlayer(){
   });
 
 }
+
+
+const mediaQuery = window.matchMedia('screen and (max-width: 500px)');
+var navbarItem = document.getElementsByClassName("navbar-item");
+var mobileMenuHide = true;
+
+function mobileOnClick(){
+  if (mediaQuery.matches) {
+    if(mobileMenuHide == true){
+      for(i = 0; i < navbarItem.length; i++){
+        navbarItem[i].style.display = "block"; 
+      }
+      mobileMenuHide = false;
+    } else if(mobileMenuHide == false){
+      for(i = 0; i < navbarItem.length; i++){
+        navbarItem[i].style.display = "none";
+      }
+      mobileMenuHide = true;
+    }
+    
+  }
+}

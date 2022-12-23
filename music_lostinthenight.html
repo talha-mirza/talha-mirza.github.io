@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Talha Mirza</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/script.js"></script>
+</head>
+
+  <body id="bodyColor">
+    <div class="content-navbar">
+      <nav class="navbar">
+        <ul>
+          <li class="navbar-home">
+            <div>
+            <a href="index.html">Talha Mirza</a>
+          </div>
+          </li>
+          <li id="home" class="home navbar-item">
+            <div>
+            <a href="index.html">Home</a>
+          </div>
+          </li>
+          <!--Navbar Contact Info-->
+          <li class="navbar-item navbar-contact">
+            <a>Contact:</a>
+            <a href="mailto:talha.s.mirza@gmail.com">Talha.S.Mirza@gmail.com</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="content-body">
+      <div class="project-header">
+        <p>
+          <img src="assets\music\lostInTheNight\Panorama.png" width="100%">
+          Instert Header Here
+        </p>
+      </div>
+      <div class="project-body">
+        <h1>Lost In The Night</h1>
+        <p>Get lost in the middle of the night. I know there's nothing left in sight.</p>
+      </div>
+
+      <div class="audio-player-container">
+        <div class="audio-player-title-container">
+          <h2 id="audioPlayerCurrentSong" class="song-title">Lost In The Night</h2>
+          <h2 class="album-title">Lost In The Night</h2>
+        </div>
+        <audio class="audio-player" controls id="audioPlayer" src="assets\music\lostInTheNight\LostInTheNight_Master.wav" type="audio/wav"></audio>
+        <ul id="playlist">
+          <li class="current-song"><a onclick="audioPlayer()" href="assets\music\lostInTheNight\LostInTheNight_Master.wav">Lost In The Night</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </body>
+</html>
