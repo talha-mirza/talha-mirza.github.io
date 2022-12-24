@@ -84,7 +84,7 @@ navbar setup
 
   .navbar-home a{
     color: var(--default-text-color);
-    font-size: 120%;
+    font-size: 1.2em;
     font-weight: 900;
     letter-spacing: 0.2rem;
     text-decoration: none;
@@ -148,7 +148,7 @@ navbar setup
     display: flex;
     justify-content: center;
     color: var(--default-text-color);
-    font-size: 200%;
+    font-size: 2.5em;
     font-weight: 900;
     letter-spacing: 0.2rem;
     text-decoration: none;
@@ -160,7 +160,7 @@ navbar setup
   }
 
   .navbar-item {
-    font-size: 200%;
+    font-size: 3em;
     display: none;
     justify-content: center;
     color: var(--default-text-color);
@@ -183,7 +183,7 @@ navbar setup
   }
 
   .navbar-contact{
-    margin-top: 30%;
+    padding-top: 5%;
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
