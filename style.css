@@ -343,7 +343,7 @@ homepage body setup
     height: max-content;
     border-radius: 30px;
     overflow: hidden;
-    width: 25%;
+    width: 40%;
   
 
     -webkit-transition: border-radius 250ms;
@@ -375,7 +375,7 @@ homepage body setup
     height: max-content;
     border-radius: 30px;
     overflow: hidden;
-    width: 35%;
+    width: 40%;
 
     -webkit-transition: border-radius 250ms;
     transition: border-radius 250ms;
