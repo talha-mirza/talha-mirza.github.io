@@ -77,6 +77,11 @@ navbar setup
     display: none;
   }
 
+  .navbar-home{
+    display: flex;
+    justify-content: center;
+  }
+
   .navbar-home a{
     color: var(--default-text-color);
     font-size: 120%;
