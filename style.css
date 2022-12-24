@@ -148,7 +148,7 @@ navbar setup
     display: flex;
     justify-content: center;
     color: var(--default-text-color);
-    font-size: 2.5em;
+    font-size: 2.25em;
     font-weight: 900;
     letter-spacing: 0.2rem;
     text-decoration: none;
@@ -424,7 +424,9 @@ project page content
 /*header styling*/
 @media screen and (max-width: 1300px){
   .project-header{
-    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .project-header p{
     height: max-content;
@@ -432,9 +434,16 @@ project page content
     overflow: hidden;
     line-height: 0;
   }
+
+  .project-header iframe{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+  
   .project-body{
     width: 100%;
-    display: block;
+    display: flex;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
@@ -498,6 +507,7 @@ project page content
 .project-body h1{
   display: flex;
   justify-content: center;
+  text-align: center;
   color: var(--default-text-color);
   letter-spacing: .2rem;
 }
