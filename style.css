@@ -447,8 +447,8 @@ project page content
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
   .audio-player-container{
     display: flex;
@@ -457,8 +457,8 @@ project page content
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 0%;
+    margin-right: 0%;
     border-radius: 30px;
     box-shadow: 0px 0px 15px 15px var(--background-color-darker);
   }
@@ -668,6 +668,7 @@ resume page content
   display: flex;
   justify-content: space-between;
   list-style: none;
+  font-size: 1em;
 }
 
 .resume-item-description{
@@ -679,7 +680,7 @@ resume page content
 }
 
 .resume-item-description p{
-  font-size: small;
+  font-size: .8em;
 }
 
 .resume-item h4{
@@ -756,6 +757,11 @@ resume page content
     display: flex;
     justify-content: space-between;
     list-style: none;
+    font-size: 2em;
+  }
+
+  .resume-item p{
+    line-height: 2em;
   }
 
   .resume-body{
@@ -772,6 +778,11 @@ resume page content
     display: flex;
     justify-content: space-between;
     list-style: none;
+    font-size: 1.5em;
+  }
+
+  .resume-item-description p{
+    line-height: 2em;
   }
 
   .resume-education{
@@ -783,7 +794,11 @@ resume page content
     justify-content: left;
     text-align: left;
     margin-left: 0%;
-    
+    margin-right: 2%; 
+  }
+
+  .resume-date{
+    margin-left: 2%;
   }
 
   .resume-body h2{
@@ -792,6 +807,7 @@ resume page content
     margin-bottom: 1%;
     color: var(--default-text-color);
     line-height: 1.5rem;
+    font-size: 3em;
   }
 
   .resume-skills{
@@ -803,5 +819,9 @@ resume page content
     text-align: left;
     justify-content: space-between;
     list-style: none;
+  }
+
+  .resume-item h4{
+    line-height: 1.5em;
   }
 }
