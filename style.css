@@ -819,6 +819,7 @@ resume page content
     text-align: left;
     justify-content: space-between;
     list-style: none;
+    font-size: 2em;
   }
 
   .resume-item h4{
