@@ -270,7 +270,7 @@ navbar setup
 homepage body setup
 ****************************************************************************************************/
 /* body style */
-@media (min-width: 1600px){
+@media (min-width: 1300px){
   .content-body{
     display: flex;
     flex-direction: row;
@@ -295,9 +295,7 @@ homepage body setup
     -webkit-transition: flex-grow 500ms;
     transition: flex-grow 500ms;
   }
-}
 
-@media (min-width: 1301px) and (max-width: 1599px){
   .content-body{
     display: flex;
     flex-direction: row;
